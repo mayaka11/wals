@@ -2,30 +2,42 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+    <script src="https://kit.fontawesome.com/1bb6d6e90e.js" crossorigin="anonymous"></script>
     <!-- CSSファイルの読み込み -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <title>wals</title>
   </head>
 
 
   <body>
     <header>
-      <h1>
-        <a href="">
-          <img src="img/logo.png" width="150">
+        <div class="container header-group">
+        <a href="#mv">
+          <img class="logo" src="img/logo.png" alt="ロゴ">
         </a>
-      </h1>
+        <div Class="menu-box">
+          <span class="list-bar"></span>
+          <span class="list-bar"></span>
+          <span class="list-bar"></span>
+        </div>
        <!-- navigation -->
       <nav>
-        <ul class="nav-list">
-          <li class="nav-list-item">
-            <a href="index.html">Portfolio</a>
-            <a href="index.html">Feature</a>
-            <a href="index.html">Profile</a>
-            <a href="index.html">Contact</a>
+        <ul class="nav">
+          <li class="nav-list">
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-list">
+            <a href="#feature">Feature</a>
+          </li>
+          <li class="nav-list">
+            <a href="#profile">Profile</a>
+          </li>
+          <li class="nav-list">
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
+        </div>
     </header>
 
     <!-- main-visual用のdiv -->
@@ -51,18 +63,18 @@
           content of page when looking at its layout.<br>
           The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
         </p>
-
         <div class="production-group">
-          <div class="productio bg-1"></div>
-          <div class="productio bg-2"></div>
-          <div class="productio bg-3"></div>
-          <div class="productio bg-4"></div>
-          <div class="productio bg-5"></div>
-          <div class="productio bg-6"></div>
+          <div class="production bg-1"></div>
+          <div class="production bg-2"></div>
+          <div class="production bg-3"></div>
+          <div class="production bg-4"></div>
+          <div class="production bg-5"></div>
+          <div class="production bg-6"></div>
         </div>
       </section>
 
-      <div class="feature">
+
+      <section id="feature">
         <p class="feature-name">
           Feature
         </p>
@@ -71,8 +83,16 @@
           content of page when looking at its layout.<br>
           The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
         </p>
-      </div>
-      <div class="profile">
+        <div class="social">
+          <i class="fas fa-code"></i>
+
+          <i class="fas fa-tv"></i>
+          <i class="fas fa-cogs"></i>
+        </div>
+      </section>
+
+
+      <section id="profile">
 　　　　　<p class="profile-name">
           Profile
         </p>
@@ -81,8 +101,29 @@
           content of page when looking at its layout.<br>
           The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
         </p>
-      </div>
-      <div class="contact">
+        <div class="introduction-group">
+          <div class="introduction pr-1"></div>
+        </div>
+        <p class="introduction-name">
+          MyName
+        </p>
+        <p class="introduction-text">
+          Contrary to popular belief, Lorem Ipsum is not simply random<br>
+          text. It has roots in a piece of Latin literature from 45<br>
+          BC, making it over 2000 years old. Richard McClintock, a Latin<br>
+          professor at Hampden-Sydney College in Virginia,looked up one<br>
+          of the more obscure Latin words, consectetur
+        </p>
+        <p class="skill-name">
+          MySkills
+        </p>
+        <p class="skill-text">
+          HTML/CSS,JavaScript,JQusery,PhotoShop
+        </p>
+      </section>
+
+
+      <section id="contact">
 　　　　<p class="contact-name">
           Contact
         </p>
@@ -91,8 +132,11 @@
           content of page when looking at its layout.<br>
           The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
         </p>
-      </div>
+
+      </section>
+
     </div>
+
 
     <footer>
      <p class="footer-text">© 2017 WebCamp</p>

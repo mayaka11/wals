@@ -8,30 +8,36 @@
 header {
   width: 100%;
   height: 70px;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   background-color: #EC715F;
 }
 
-a {
-  text-decoration: none;
+.header-group {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0;
 }
 
-header .h1 { /*headerタグ内のh1クラスのみに反映*/
-  text-align: left;
+.logo {
+  height: 70px;
 }
 
-header .nav-list {
-  text-align: right;
-  margin-left: auto;
-
+.nav {
+  display: flex;
 }
 
-.nav-list-item {
-  list-style: none;
-  margin: 0 20px;
+.nav-list {
+  width: 120px;
   line-height: 70px;
+  color: #FAFAFA;
+  padding: 0 30px;
+  list-style: none;
+  font-size: 16px;
 }
 
+.nav-list a{
+  color: #FAFAFA;
+}
 
 
 .main-visual {
@@ -142,7 +148,8 @@ header .nav-list {
 .feature {
   width: 100%;
   height: auto;
-  background-color: pink; /* 背景色 */
+  text-align: center;
+  position: relative; /* #socialの基準位置を相対位置へ変更する */
 }
 
 .feature-name {
@@ -158,6 +165,14 @@ header .nav-list {
   color: #000000;
   text-align: center; /*文字を中央ぞろえにする*/
 }
+
+.social i {
+  display: inline-block;
+  margin-left: 200px;
+  font-size: 60px;
+  padding-top: 30px;
+}
+
 
 
 .profile {
@@ -178,6 +193,46 @@ header .nav-list {
   margin-top: 30px;
   color: #000000;
   text-align: center; /*文字を中央ぞろえにする*/
+}
+
+.introduction-group {
+  display: flex;
+	flex-flow: row wrap;
+  width: 920px;
+  /*padding: 30px 0 90px 0;*/
+  margin: 0 auto;
+}
+
+.introduction {
+	width: 300px;
+	height: 250px;
+	margin: 10px 10px 0 0;
+	background-size: cover;
+	background-position: center;
+}
+
+.pr-1 {
+  background-image: url(img/my-icon.jpg);
+}
+
+.introduction-name {
+  font-size: 20px;
+  color: #000000;
+}
+
+.introduction-text {
+  font-size: 16px;
+  color: #000000;
+}
+
+.skill-name {
+  font-size: 20px;
+  color: #000000;
+}
+
+.skill-text {
+  font-size: 16px;
+  color: #000000;
 }
 
 

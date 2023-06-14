@@ -146,10 +146,8 @@ header {
 
 
 .feature {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  position: relative; /* #socialの基準位置を相対位置へ変更する */
+  background-size: cover;
+  background-position: center;
 }
 
 .feature-name {
@@ -166,12 +164,33 @@ header {
   text-align: center; /*文字を中央ぞろえにする*/
 }
 
-.social i {
-  display: inline-block;
-  margin-left: 200px;
-  font-size: 60px;
-  padding-top: 30px;
+.social-group {
+  display: flex; /*HTMLブロックを横並びに表示する。flexboxと呼ばれるレイアウトモードを使用することができる*/
+  width: 980px; /*横幅*/
+  padding: 30px 0 90px 0; /*要素内側の余白*/
+  margin: 0 auto; /*要素外側の余白*/
 }
+
+.strength {
+  width: 320px; 
+  margin-right: 10px;
+  text-align: center; /*テキストの水平方向への配置を指定*/
+  font-size: 60px;
+}
+
+.strength:last-child { /*疑似クラスで兄弟要素のグループの中で最後の要素を表している*/
+  margin-right: 0; /*今回は<p>になる*/
+}
+
+.strength-title {
+  padding: 10px 0;
+  font-size:20px;
+}
+.strength-text {
+  text-align: left;
+  font-size: 16px;
+}
+
 
 
 

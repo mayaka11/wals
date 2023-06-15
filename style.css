@@ -1,14 +1,29 @@
-/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+/* ============================
+ブラウザがそれぞれ持っているCSSをリセットするための記述
+セッティング
+===============================*/
 ＊ {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none; /*テキストの装飾を指定するプロパティ。noneは装飾を行わない*/
+}
+
+.container {
+  width: 1024px; /*横幅*/
+  margin: 0 auto; /*外側に余白*/
+}
+
+/*==============================
+header
+===============================*/
+
 header {
   width: 100%;
   height: 70px;
-  /*margin: 0 auto;*/
   background-color: #EC715F;
 }
 
@@ -39,69 +54,61 @@ header {
   color: #FAFAFA;
 }
 
+/*=========================
+mainvisual
+=========================*/
 
 .main-visual {
   width: 100%; /* 横幅いっぱい */
   height: 650px; /* 高さ */
+  text-align: center;
+  color: #FAFAFA;
   background-image: url(img/mv.png);/*画像*/
   background-size: cover; /* 縦横比を維持したまま背景領域を埋め尽くす */
   background-position: center; /* 背景画像を中央に配置 */
-  display: flex; /*Flexboxの利用*/
-  justify-content: center; /* 子要素の横並び・中央寄せ */
 }
 
-.main-visual-content {
-  width: 40%;
-  height: 650px;
- text-align: center; /*文字を中央ぞろえにする*/
-}
-
-.main-visual-name {
-  font-size: 64px;
+.main-visual-title {
   padding-top: 200px;
-  color: #FAFAFA; /* 文字色*/
+  font-family: 'Raleway', sans-serif;
+  font-size: 64px;
 }
 
 .main-visual-text {
+  padding-top: 10px;
   font-size: 20px;
-  margin-top: 10px;
-  color: #FAFAFA; /* 文字色*/
 }
 
+
+/*===============================
+portfolio
+===============================*/
 
 
 .main {
-  width: 100%; /* 横幅いっぱい→840px */
-  height: auto; /* 高さ*/
-  /*background-color: green; /* 背景色green */
-  /*margin: 0 auto;/*中央寄せ（左右に余白がないとできない）*/
+  background-color: #ECEFF1;
 }
 
-.portfplio {
-  width: 100%;
-  background-color: #ECEFF1; /* 背景色 */
-}
-
-.portfplio-name {
-  font-size: 32px;
+.heading {
   padding-top: 90px;
-  color: #000000;
-  text-align: center; /*文字を中央ぞろえにする*/
+  text-align: center;
+  font-family: 'Raleway', sans-serif; /*フォントの設定*/
+  font-size: 32px;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 8px auto 0 auto;
+  background-color: #EC715F;
 }
 
 .portfplio-text {
   font-size: 16px;
   margin-top: 30px;
-  color: #000000;
   text-align: center; /*文字を中央ぞろえにする*/
-}
-
-.production-group {
-  display: flex;
-	flex-flow: row wrap;
-  width: 920px;
-  /*padding: 30px 0 90px 0;*/
-  margin: 0 auto;
 }
 
 .production{
@@ -110,6 +117,14 @@ header {
 	margin: 10px 10px 0 0;
 	background-size: cover;
 	background-position: center;
+}
+
+.production-group {
+  display: flex;
+	flex-flow: row wrap;
+  width: 920px;
+  padding: 30px 0 90px 0;
+  margin: 0 auto;
 }
 
 .production:nth-child(-n+3){
@@ -144,35 +159,31 @@ header {
 }
 
 
+/*====================================
+feature
+=====================================*/
+
 
 .feature {
   background-size: cover;
   background-position: center;
 }
 
-.feature-name {
-  font-size: 32px;
-  padding-top: 90px;
-  color: #000000;
-  text-align: center; /*文字を中央ぞろえにする*/
-}
-
 .feature-text {
   font-size: 16px;
   margin-top: 30px;
-  color: #000000;
   text-align: center; /*文字を中央ぞろえにする*/
 }
 
-.social-group {
+.strength-group {
   display: flex; /*HTMLブロックを横並びに表示する。flexboxと呼ばれるレイアウトモードを使用することができる*/
-  width: 980px; /*横幅*/
+  width: 980px;
   padding: 30px 0 90px 0; /*要素内側の余白*/
   margin: 0 auto; /*要素外側の余白*/
 }
 
 .strength {
-  width: 320px; 
+  width: 320px;
   margin-right: 10px;
   text-align: center; /*テキストの水平方向への配置を指定*/
   font-size: 60px;
@@ -191,68 +202,60 @@ header {
   font-size: 16px;
 }
 
-
+/*=================================
+profile
+=================================*/
 
 
 .profile {
-  width: 100%;
-  height: auto;
-  background-color: green; /* 背景色 */
+  background-color: #ECEFF1;
 }
 
-.profile-name {
-  font-size: 32px;
-  padding-top: 90px;
-  color: #000000;
-  text-align: center; /*文字を中央ぞろえにする*/
-}
-
-.profile-text {
+.heading-text {
   font-size: 16px;
   margin-top: 30px;
   color: #000000;
   text-align: center; /*文字を中央ぞろえにする*/
 }
 
-.introduction-group {
+.profile-group {
   display: flex;
-	flex-flow: row wrap;
-  width: 920px;
-  /*padding: 30px 0 90px 0;*/
-  margin: 0 auto;
+  padding: 30px 0 90px 0;
+}
+
+.left-content {
+  width: 50%;
+}
+
+.rigth-content {
+  width: 50%;
 }
 
 .introduction {
-	width: 300px;
+	width: 250px;
 	height: 250px;
-	margin: 10px 10px 0 0;
-	background-size: cover;
-	background-position: center;
-}
-
-.pr-1 {
-  background-image: url(img/my-icon.jpg);
+	margin: 0 auto;
+	background-image: url(img/my-icon.jpg);
+  border-radius: 50%;
 }
 
 .introduction-name {
+  margin: 20px 0 5px 0;
   font-size: 20px;
-  color: #000000;
+}
+
+.introduction-name:first-child {
+  margin-top: 0;
 }
 
 .introduction-text {
   font-size: 16px;
-  color: #000000;
 }
 
-.skill-name {
-  font-size: 20px;
-  color: #000000;
-}
 
-.skill-text {
-  font-size: 16px;
-  color: #000000;
-}
+/*==============================
+contact
+==============================*/
 
 
 .contact {
@@ -261,19 +264,15 @@ header {
   background-color: pink; /* 背景色 */
 }
 
-.contact-name {
-  font-size: 32px;
-  padding-top: 90px;
-  color: #000000;
-  text-align: center; /*文字を中央ぞろえにする*/
-}
-
-.contact-text {
+.heading-text {
   font-size: 16px;
   margin-top: 30px;
   color: #000000;
   text-align: center; /*文字を中央ぞろえにする*/
 }
+
+
+
 
 
 
